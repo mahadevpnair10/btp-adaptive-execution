@@ -1,3 +1,10 @@
 venv/
 __pycache__/
 .env
+
+# training/evaluation artifacts (regenerate with train_qlearning.py / evaluate.py)
+models/
+logs/
+*.zip
+.pytest_cache/
+*.egg-info/

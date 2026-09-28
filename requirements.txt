@@ -1,38 +1,29 @@
-cloudpickle==3.1.2
-cuda-bindings==13.4.2
-cuda-pathfinder==1.8.2
-cuda-toolkit==13.0.3.0
-Farama-Notifications==0.0.6
-filelock==4.0.1
-fsspec==2026.9.0
-gymnasium==1.3.0
-Jinja2==3.1.6
-MarkupSafe==3.0.3
-mpmath==1.3.0
-networkx==3.6.1
-numpy==2.5.3
-nvidia-cublas==13.1.1.3
-nvidia-cuda-cupti==13.0.85
-nvidia-cuda-nvrtc==13.0.88
-nvidia-cuda-runtime==13.0.96
-nvidia-cudnn-cu13==9.24.0.43
-nvidia-cufft==12.0.0.61
-nvidia-cufile==1.15.1.6
-nvidia-curand==10.4.0.35
-nvidia-cusolver==12.0.4.66
-nvidia-cusparse==12.6.3.3
-nvidia-cusparselt-cu13==0.8.1
-nvidia-nccl-cu13==2.30.7
-nvidia-nvjitlink==13.4.92
-nvidia-nvshmem-cu13==3.4.5
-nvidia-nvtx==13.0.85
-pandas==3.0.6
-python-dateutil==2.9.0.post0
-setuptools==84.0.0
-simpy==4.1.2
-six==1.17.0
-stable_baselines3==2.9.0
-sympy==1.14.0
-torch==2.14.0
-triton==3.8.0
-typing_extensions==4.16.0
+# Core simulation / RL stack. See README.md ("Why We Are Using These
+# Libraries") for what each package is for.
+#
+# The original version of this file was a `pip freeze` from a CUDA-enabled
+# Linux training environment (it pinned exact nvidia-cuda-*/cuda-toolkit
+# wheels and torch==2.14.0). Those CUDA packages don't have matching wheels
+# on Windows/CPU-only machines and aren't needed to run this project, so
+# this file now lists the actual direct dependencies with sane version
+# ranges instead. If you have an NVIDIA GPU and want CUDA acceleration,
+# install a CUDA build of torch yourself first (see
+# https://pytorch.org/get-started/locally/), then `pip install -r
+# requirements.txt` for everything else.
+numpy>=1.26,<3
+pandas>=2.0,<3
+simpy>=4.1,<5
+gymnasium>=1.0,<2
+
+# torch>=2.8 is stable-baselines3==2.9.0's minimum supported version.
+# NOTE: on at least Windows + Python 3.12, SB3's model-checkpoint *loading*
+# hits a real upstream bug with every torch version SB3 2.9.0 supports
+# (verified with both 2.8.0 and 2.14.0) -- see the docstring in
+# src/agents/_torch_load_workaround.py for the root cause and the narrow,
+# automatically-applied workaround (it's imported by src/agents/__init__.py,
+# no action needed to use it).
+torch>=2.8,<3
+stable-baselines3>=2.9,<3
+tensorboard>=2.15   # optional: only used for train_qlearning.py's --log-dir TensorBoard logs
+
+pytest>=8.0,<9
