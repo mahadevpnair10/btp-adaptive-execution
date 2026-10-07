@@ -36,6 +36,7 @@ from stable_baselines3.common.utils import set_random_seed
 from stable_baselines3.common.vec_env import DummyVecEnv
 
 from src.envs.adaptive_exec_env import AdaptiveExecutionEnv, EnvConfig
+from src.simulator.swf_loader import DEFAULT_SWF_PATH
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_MODEL_DIR = PROJECT_ROOT / "models"
@@ -98,6 +99,7 @@ def make_env(
 
 
 def build_env_config(args: argparse.Namespace) -> EnvConfig:
+    swf_path = None if getattr(args, "synthetic", False) else getattr(args, "swf_path", str(DEFAULT_SWF_PATH))
     return EnvConfig(
         num_nodes=args.num_nodes,
         cores_per_node=args.cores_per_node,
@@ -105,6 +107,8 @@ def build_env_config(args: argparse.Namespace) -> EnvConfig:
         network_bandwidth_gbps=args.network_bandwidth_gbps,
         arrival_rate=args.arrival_rate,
         jobs_per_episode=args.jobs_per_episode,
+        swf_path=swf_path,
+        use_standardized_obs=not getattr(args, "legacy_7d_obs", False),
     )
 
 
@@ -165,6 +169,19 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--cores-per-node", type=int, default=16)
     parser.add_argument("--ram-gb-per-node", type=float, default=64.0)
     parser.add_argument("--network-bandwidth-gbps", type=float, default=10.0)
+    parser.add_argument(
+        "--swf-path",
+        type=str,
+        default=str(DEFAULT_SWF_PATH),
+        help="path to .swf workload trace file (default: data/workloads/sdsc_sp2_benchmark.swf)",
+    )
+    parser.add_argument(
+        "--synthetic",
+        action="store_true",
+        default=False,
+        help="force synthetic Poisson workload generation instead of SWF trace",
+    )
+    parser.add_argument("--legacy-7d-obs", action="store_true", default=False, help="use legacy 7-D observation instead of standardized 8-D")
     parser.add_argument("--eval-freq", type=int, default=10_000, help="training steps between evaluations")
     parser.add_argument("--eval-episodes", type=int, default=10)
     parser.add_argument("--log-dir", type=str, default=str(DEFAULT_LOG_DIR))

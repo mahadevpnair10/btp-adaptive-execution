@@ -46,18 +46,30 @@ class ClusterConfig:
     # keeping episodes fast to simulate without changing any relative
     # ordering between jobs or modes.
     core_flops: float = 1e12
-    local_io_latency_s_per_mb: float = 1e-4   # local disk/IO seconds per MB
+    local_io_latency_s_per_mb: float = 1e-4   # local disk/IO seconds per MB (tau_io)
 
     threads_per_job: int = 4             # shared-memory parallel degree (N_threads)
-    thread_sync_alpha: float = 0.01      # thread synchronisation overhead constant
-    mem_bus_contention_mu: float = 5e-5  # memory bus contention, seconds per MB
+    thread_sync_alpha: float = 0.01      # thread synchronisation overhead constant (alpha)
+    mem_bus_contention_mu: float = 5e-5  # memory bus contention, seconds per MB (mu)
 
     dist_worker_nodes: int = 4           # distributed-memory fan-out (K)
-    network_latency_base_s: float = 5e-3     # fixed network round-trip floor
-    serde_overhead_s_per_mb: float = 2e-5    # (de)serialization cost per MB
+    # LogGP Network Communication Parameters (Alexandrov et al. 1995, Culler et al. 1993):
+    # L: network latency floor (round-trip propagation delay)
+    network_latency_base_s: float = 5e-3
+    # o: software overhead per MB (serialization/deserialization & TCP stack)
+    serde_overhead_s_per_mb: float = 2e-5
 
-    power_watts_per_core: float = 15.0   # used to estimate cpu_energy_joules
-    stall_wait_threshold_s: float = 1.0  # queuing delay considered a "stall"
+    # Server Power & Energy Parameters (Barroso & Hölzle 2007, Fan et al. ISCA 2007):
+    # Affine model: P(u) = P_idle * (cores/total) + P_dyn * cores
+    power_watts_per_core: float = 15.0       # dynamic active power per core (P_dynamic)
+    power_idle_watts_per_node: float = 40.0  # base idle power per node (P_idle)
+    stall_wait_threshold_s: float = 1.0      # queuing delay considered a "stall"
+
+    # Dynamic Contention & Interference Physics (Williams et al. 2009, Casanova et al. 2014):
+    mem_contention_threshold: float = 0.80   # memory utilization threshold for bus thrashing
+    mem_contention_factor: float = 0.50      # kappa_mem: degradation slope under memory pressure
+    cpu_contention_factor: float = 0.05      # kappa_cpu: scheduling jitter under co-tenant core load
+    network_contention_beta: float = 0.50    # beta_net: fluid-flow interconnect sharing penalty
 
     # Background "noisy neighbour" load, see Cluster._background_* below.
     background_job_mean_interarrival_s: float = 2.0
@@ -232,30 +244,66 @@ class Cluster:
         yield simpy.AllOf(self.env, requests)
         wait_time = self.env.now - wait_start
 
+        # --- Real-Time Physical Contention Dynamics (SimGrid / Roofline Models) ---
+        # 1. Background CPU load jitter on allocated nodes (co-tenant noise)
+        bg_cpu_ratios = [
+            max(0.0, (self.node_cores[n].count - cores_needed) / self.node_cores[n].capacity)
+            for n in nodes_used
+        ]
+        avg_bg_cpu = float(np.mean(bg_cpu_ratios))
+        cpu_contention_penalty = cfg.cpu_contention_factor * avg_bg_cpu
+
+        # 2. Memory bus contention (Roofline model, Williams et al. 2009)
+        # Evaluated against physical RAM capacity before appending current job allocation
+        node_mem_utils = [
+            self._node_memory_used_mb[n] / (self.ram_gb_per_node * 1024.0)
+            for n in nodes_used
+        ]
+        avg_mem_util = float(np.mean(node_mem_utils))
+        mem_contention_penalty = cfg.mem_contention_factor * max(0.0, avg_mem_util - cfg.mem_contention_threshold)
+
+        # 3. Interconnect fluid-flow contention (LogGP + Max-Min link sharing)
+        net_contention_penalty = 0.0
+        if mode == MODE_DISTRIBUTED and self.network_saturation > 0.0:
+            effective_bw_ratio = max(0.05, 1.0 - cfg.network_contention_beta * self.network_saturation)
+            net_transfer_ideal = job.data_size_mb / gbps_to_mbps(self.network_bandwidth_gbps)
+            net_transfer_contended = net_transfer_ideal / effective_bw_ratio
+            net_contention_penalty = net_transfer_contended - net_transfer_ideal
+
+        # Contention-adjusted service time
+        actual_duration = (duration * (1.0 + mem_contention_penalty + cpu_contention_penalty)) + net_contention_penalty
+
         for n in nodes_used:
             self._node_memory_used_mb[n] += job.data_size_mb
         if mode == MODE_DISTRIBUTED:
-            self._network_busy_mbps += job.data_size_mb / max(duration, 1e-9)
+            self._network_busy_mbps += job.data_size_mb / max(actual_duration, 1e-9)
 
         stalled = wait_time > cfg.stall_wait_threshold_s or any(
             self._node_memory_used_mb[n] > self.ram_gb_per_node * 1024.0 for n in nodes_used
         )
 
         try:
-            yield self.env.timeout(duration)
+            yield self.env.timeout(actual_duration)
         finally:
             for n, req in zip(request_nodes, requests):
                 self.node_cores[n].release(req)
             for n in nodes_used:
                 self._node_memory_used_mb[n] = max(0.0, self._node_memory_used_mb[n] - job.data_size_mb)
             if mode == MODE_DISTRIBUTED:
-                self._network_busy_mbps = max(0.0, self._network_busy_mbps - job.data_size_mb / max(duration, 1e-9))
+                self._network_busy_mbps = max(0.0, self._network_busy_mbps - job.data_size_mb / max(actual_duration, 1e-9))
 
-        energy = cfg.power_watts_per_core * cores_needed * len(nodes_used) * duration
+        # Affine power & energy model (Barroso & Hölzle 2007, Fan et al. ISCA 2007)
+        # P = P_dyn * total_active_cores + sum(P_idle * allocated_fraction_per_node)
+        total_active_cores = cores_needed * len(nodes_used)
+        dynamic_power = cfg.power_watts_per_core * total_active_cores
+        idle_power = len(nodes_used) * cfg.power_idle_watts_per_node * (cores_needed / self.cores_per_node)
+        total_power_watts = dynamic_power + idle_power
+        energy = total_power_watts * actual_duration
+
         return ExecutionResult(
             job_id=job.job_id,
             selected_mode=mode,
-            actual_duration=duration,
+            actual_duration=actual_duration,
             wait_time=wait_time,
             cpu_energy_joules=energy,
             peak_memory_mb=job.data_size_mb,

@@ -10,11 +10,18 @@ from __future__ import annotations
 
 import numpy as np
 
-# Observation vector indices, matching AdaptiveExecutionEnv._build_observation.
+# Observation vector indices (8-dimensional standardized vector)
 IDX_DATA_SIZE = 0
 IDX_COMPUTE_OPS = 1
 IDX_PARALLELIZABILITY = 2
-IDX_NETWORK_SATURATION = 6
+IDX_IO_INTENSITY = 3
+IDX_TARGET_CPU = 4
+IDX_CLUSTER_AVG_CPU = 5
+IDX_TARGET_MEM = 6
+IDX_NETWORK_SATURATION = 7
+
+# Legacy 7-dimensional network saturation index
+IDX_LEGACY_NETWORK_SATURATION = 6
 
 
 class StaticHeuristics:
@@ -34,10 +41,29 @@ class StaticHeuristics:
 
     @staticmethod
     def rule_based_threshold(obs: np.ndarray) -> int:
-        # obs[0]: data_size, obs[1]: compute_ops, obs[2]: parallelizability, obs[6]: net_sat
-        if obs[IDX_PARALLELIZABILITY] < 0.3 or obs[IDX_COMPUTE_OPS] < 0.2:
-            return 0  # Low parallelizability or small compute -> Sequential
-        elif obs[IDX_DATA_SIZE] > 0.7 or obs[IDX_NETWORK_SATURATION] > 0.8:
-            return 1  # High data transfer cost or saturated network -> Shared Memory
+        """Rule-based heuristic supporting both 8-D and 7-D observations.
+
+        In 8-D standardized mode, utilizes the I/O intensity metric:
+        - Low parallelizability or tiny compute -> Sequential (Action 0)
+        - Heavy data footprint, saturated network, or high I/O wait -> Shared Memory (Action 1)
+        - Highly parallelizable, compute-heavy, low-IO -> Distributed (Action 2)
+        """
+        if len(obs) >= 8:
+            data_size = obs[IDX_DATA_SIZE]
+            compute_ops = obs[IDX_COMPUTE_OPS]
+            parallelizability = obs[IDX_PARALLELIZABILITY]
+            io_intensity = obs[IDX_IO_INTENSITY]
+            net_sat = obs[IDX_NETWORK_SATURATION]
         else:
-            return 2  # Highly parallelizable & large workload -> Distributed
+            data_size = obs[IDX_DATA_SIZE]
+            compute_ops = obs[IDX_COMPUTE_OPS]
+            parallelizability = obs[IDX_PARALLELIZABILITY]
+            io_intensity = 0.0
+            net_sat = obs[IDX_LEGACY_NETWORK_SATURATION]
+
+        if parallelizability < 0.3 or compute_ops < 0.2:
+            return 0  # Low parallelizability or small compute -> Sequential
+        elif data_size > 0.7 or net_sat > 0.8 or io_intensity > 0.75:
+            return 1  # High data transfer cost, saturated net, or heavy I/O -> Shared Memory
+        else:
+            return 2  # Highly parallelizable & compute-intensive workload -> Distributed

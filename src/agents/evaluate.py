@@ -25,6 +25,7 @@ import pandas as pd
 
 from src.agents.static_heuristics import StaticHeuristics
 from src.envs.adaptive_exec_env import AdaptiveExecutionEnv, EnvConfig
+from src.simulator.swf_loader import DEFAULT_SWF_PATH
 
 Policy = Callable[[np.ndarray], int]
 
@@ -147,12 +148,26 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--network-bandwidth-gbps", type=float, default=10.0)
     parser.add_argument("--model-path", type=str, default=None, help="path to a trained SB3 model .zip to include")
     parser.add_argument("--algo", type=str, default="dqn", choices=["dqn", "ppo"], help="algorithm of --model-path")
+    parser.add_argument(
+        "--swf-path",
+        type=str,
+        default=str(DEFAULT_SWF_PATH),
+        help="path to .swf workload trace file (default: data/workloads/sdsc_sp2_benchmark.swf)",
+    )
+    parser.add_argument(
+        "--synthetic",
+        action="store_true",
+        default=False,
+        help="force synthetic Poisson workload generation instead of SWF trace",
+    )
+    parser.add_argument("--legacy-7d-obs", action="store_true", default=False, help="use legacy 7-D observation instead of standardized 8-D")
     parser.add_argument("--output-csv", type=str, default=None, help="optional path to dump raw per-episode results")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
+    swf_path = None if args.synthetic else args.swf_path
     env_config = EnvConfig(
         num_nodes=args.num_nodes,
         cores_per_node=args.cores_per_node,
@@ -160,6 +175,8 @@ def main() -> None:
         network_bandwidth_gbps=args.network_bandwidth_gbps,
         arrival_rate=args.arrival_rate,
         jobs_per_episode=args.jobs_per_episode,
+        swf_path=swf_path,
+        use_standardized_obs=not args.legacy_7d_obs,
     )
 
     policies: Dict[str, Policy] = dict(STATIC_POLICIES)
