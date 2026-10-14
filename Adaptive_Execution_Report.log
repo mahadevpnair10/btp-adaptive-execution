@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.10)  14 OCT 2026 07:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.10)  14 OCT 2026 19:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -481,6 +481,22 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \tcb@temp=\box69
 \tcb@temp=\box70
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
+(/usr/share/texlive/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+))
+Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
+\tcb@testbox=\box71
+\tcb@totalupperbox=\box72
+\tcb@totallowerbox=\box73
+)
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
 
@@ -493,15 +509,8 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
 (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -652,7 +661,7 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip57
 \enit@outerparindent=\dimen280
 \enit@toks=\toks41
-\enit@inbox=\box71
+\enit@inbox=\box74
 \enit@count@id=\count309
 \enitdp@description=\count310
 )
@@ -669,8 +678,8 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@olf=\skip65
 \f@nch@O@orf=\skip66
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 37.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 63
+Package hyperref Info: Option `colorlinks' set `true' on input line 38.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 65
 .
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
@@ -679,29 +688,29 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count311
-\l__pdf_internal_box=\box72
+\l__pdf_internal_box=\box75
 )
 (./Adaptive_Execution_Report.aux)
 \openout1 = `Adaptive_Execution_Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -741,7 +750,7 @@ LaTeX Font Info:    ... okay on input line 63.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count312
 \scratchdimen=\dimen281
-\scratchbox=\box73
+\scratchbox=\box76
 \nofMPsegments=\count313
 \nofMParguments=\count314
 \everyMPshowfont=\toks42
@@ -759,68 +768,68 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 63.
+Package hyperref Info: Link coloring ON on input line 65.
 
 (./Adaptive_Execution_Report.out) (./Adaptive_Execution_Report.out)
 \@outlinefile=\write4
 \openout4 = `Adaptive_Execution_Report.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-0.
+2.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-0.
+2.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-70.
+72.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-70.
+72.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 70.
+(Font)              <10.95> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 70.
+(Font)              <8> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 70.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+(Font)              <6> on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 71.
+(Font)              <10> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 71.
+(Font)              <7> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 71.
+(Font)              <5> on input line 73.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
-1.
+3.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
-2.
+4.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -831,165 +840,191 @@ enc/dvips/lm/lm-ec.enc}
 dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] [2{/usr/sh
 are/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 148.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 150.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 165.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 167.
  [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 182.
- [4{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [5] [6] [7]
-Underfull \hbox (badness 2158) in paragraph at lines 409--409
+(Font)              <12> on input line 184.
+ [4{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [5] [6] [7] [8]
+Underfull \hbox (badness 2158) in paragraph at lines 411--411
 []|$\OML/lmm/m/it/9 T[] \OT1/lmr/m/n/9 = [] [] +
  []
 
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 []|[]\T1/lmr/bx/n/9 Real-World Ef-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 []|[]\T1/lmr/bx/n/9 Literature Stan-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 []|\T1/lmr/m/n/9 Parallel Core
  []
 
 
-Underfull \hbox (badness 1400) in paragraph at lines 512--512
+Underfull \hbox (badness 1400) in paragraph at lines 553--553
 \T1/lmr/m/n/9 tency & Se-ri-al-iza-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 []|\T1/lmr/m/n/9 SimGrid Max-Min
  []
 
 
-Underfull \hbox (badness 2556) in paragraph at lines 512--512
+Underfull \hbox (badness 2556) in paragraph at lines 553--553
 \T1/lmr/m/n/9 as-sum-ing ded-i-cated 10 Gbps
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 512--512
+Underfull \hbox (badness 1107) in paragraph at lines 553--553
 []|\T1/lmr/m/n/9 Memory Bus Bot-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 []|\T1/lmr/m/n/9 Noisy Neigh-bor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 []|\T1/lmr/m/n/9 Captures tail-latency spikes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 \T1/lmr/m/n/9 caused by back-ground co-
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 512--512
+Underfull \hbox (badness 5189) in paragraph at lines 553--553
 \T1/lmr/m/n/9 tenants com-pet-ing for CPU
  []
 
 
-Underfull \hbox (badness 5119) in paragraph at lines 512--512
+Underfull \hbox (badness 5119) in paragraph at lines 553--553
 []|\T1/lmr/m/n/9 Non-Linear Server
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
 []|\T1/lmr/m/n/9 Proves dis-tributed ex-e-cu-tion
  []
 
-[10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 595--595
-[]|\T1/lmtt/b/n/9 dqn_trained \T1/lmr/bx/n/9 (RL
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 619--619
-[]|\T1/lmtt/b/n/9 dqn_trained \T1/lmr/bx/n/9 (RL
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 625--627
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 628--630
-
+[11]
+Overfull \hbox (20.06715pt too wide) in paragraph at lines 579--581
+\T1/lmr/m/n/10.95 When a job ar-rives with clus-ter state $\OT1/lmr/bx/n/10.95 
+s$\T1/lmr/m/n/10.95 , the net-work out-puts three Q-values: $\OT1/lmr/m/n/10.95
+ [\OML/lmm/m/it/10.95 Q\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 s\OML/lmm/m/it/1
+0.95 ; \OT1/lmr/m/n/10.95 0)\OML/lmm/m/it/10.95 ; Q\OT1/lmr/m/n/10.95 (\OT1/lmr
+/bx/n/10.95 s\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 1)\OML/lmm/m/it/10.95 ; Q
+\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 s\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.
+95 2)]$\T1/lmr/m/n/10.95 .
  []
 
 [12]
-Underfull \hbox (badness 2343) in paragraph at lines 667--667
-[]|\T1/lmr/m/n/9 2,000 real-world su-per-com-puter jobs
+Underfull \hbox (badness 10000) in paragraph at lines 632--632
+[]|\T1/lmr/m/n/9 Evaluation Check-point
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 708--710
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--667
+Underfull \hbox (badness 10000) in paragraph at lines 718--720
+
+ []
+
+[14] [15]
+Underfull \hbox (badness 1715) in paragraph at lines 752--752
+\T1/lmr/m/n/9 model, Roofline RAM con-tention,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
+\T1/lmr/m/n/9 affine en-ergy model, \T1/lmtt/m/n/9 execute()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
+[]|\T1/lmtt/m/n/9 SWFWorkloadLoader\T1/lmr/m/n/9 : parses 18-
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 752--752
 []|\T1/lmtt/m/n/9 AdaptiveExecutionEnv\T1/lmr/m/n/9 : stan-dard
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 667--667
-\T1/lmr/m/n/9 Gym-na-sium in-ter-face (\T1/lmtt/m/n/9 reset\T1/lmr/m/n/9 , \T1/
-lmtt/m/n/9 step\T1/lmr/m/n/9 ),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 667--667
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
 []|\T1/lmr/m/n/9 Baseline rules:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--667
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
 \T1/lmtt/m/n/9 rule_based_threshold()\T1/lmr/m/n/9 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--667
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
 \T1/lmtt/m/n/9 always_sequential()\T1/lmr/m/n/9 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--667
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
 \T1/lmtt/m/n/9 always_shared()\T1/lmr/m/n/9 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--667
-\T1/lmr/m/n/9 tri-als across all 5 poli-cies, logs
+Underfull \hbox (badness 1400) in paragraph at lines 752--752
+[]|\T1/lmtt/m/n/9 train()\T1/lmr/m/n/9 : multi-algorithm train-ing
  []
 
 
-Underfull \hbox (badness 3557) in paragraph at lines 667--667
-\T1/lmr/m/n/9 turnaround times, en-ergy, and ac-
+Underfull \hbox (badness 7814) in paragraph at lines 752--752
+\T1/lmr/m/n/9 tri-als across all 7 poli-cies via
  []
 
-[13] [14] [15] [16] (./Adaptive_Execution_Report.aux)
+
+Underfull \hbox (badness 5533) in paragraph at lines 752--752
+\T1/lmtt/m/n/9 --benchmark-all\T1/lmr/m/n/9 , logs turnaround
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 752--752
+[]|\T1/lmr/m/n/9 24 au-to-mated unit tests ver-i-fy-
+ []
+
+[16]
+Overfull \hbox (4.34676pt too wide) in paragraph at lines 775--776
+\T1/lmr/m/n/10.95 prin-ci-pled Lya-punov drift-plus-penalty re-wards that ex-pl
+ic-itly min-i-mize energy-delay trade-
+ []
+
+[17] [18] [19] (./Adaptive_Execution_Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `Adaptive_Execution_Report.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 89A51807945FE42FA38FB3686D99C07D;9649.
+(rerunfilecheck)             Checksum: 087A2F506D5D14756E4C168D97B49624;11258.
  ) 
 Here is how much of TeX's memory you used:
- 21541 strings out of 476182
- 394939 string characters out of 5795595
- 1953975 words of memory out of 5000000
- 43021 multiletter control sequences out of 15000+600000
+ 21881 strings out of 476182
+ 403756 string characters out of 5795595
+ 1962975 words of memory out of 5000000
+ 43336 multiletter control sequences out of 15000+600000
  667830 words of font info for 110 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,17n,107p,556b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,17n,107p,755b,756s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/pub
@@ -1002,15 +1037,15 @@ ype1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lms
-y10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb>
-Output written on Adaptive_Execution_Report.pdf (16 pages, 560575 bytes).
+y10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Adaptive_Execution_Report.pdf (19 pages, 592688 bytes).
 PDF statistics:
- 535 PDF objects out of 1000 (max. 8388607)
- 436 compressed objects within 5 object streams
- 122 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 602 PDF objects out of 1000 (max. 8388607)
+ 497 compressed objects within 5 object streams
+ 140 named destinations out of 1000 (max. 500000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 

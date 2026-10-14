@@ -29,7 +29,7 @@ import argparse
 from pathlib import Path
 from typing import Callable, Optional
 
-from stable_baselines3 import DQN, PPO
+from stable_baselines3 import A2C, DQN, PPO
 from stable_baselines3.common.callbacks import EvalCallback
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.utils import set_random_seed
@@ -69,9 +69,20 @@ PPO_CONFIG = {
     "ent_coef": 0.01,
 }
 
+# Standard A2C hyperparameters for episodic discrete control.
+A2C_CONFIG = {
+    "policy": "MlpPolicy",
+    "learning_rate": 7e-4,
+    "n_steps": 20,
+    "gamma": 0.99,
+    "gae_lambda": 1.0,
+    "ent_coef": 0.01,
+}
+
 ALGORITHMS: dict[str, tuple[type, dict]] = {
     "dqn": (DQN, DQN_CONFIG),
     "ppo": (PPO, PPO_CONFIG),
+    "a2c": (A2C, A2C_CONFIG),
 }
 
 

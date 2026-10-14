@@ -97,6 +97,8 @@ def load_rl_policy(model_path: str, algo: str) -> Policy:
         from stable_baselines3 import DQN as AlgoCls
     elif algo == "ppo":
         from stable_baselines3 import PPO as AlgoCls
+    elif algo == "a2c":
+        from stable_baselines3 import A2C as AlgoCls
     else:
         raise ValueError(f"unknown algo: {algo}")
     model = AlgoCls.load(model_path)
@@ -147,7 +149,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--ram-gb-per-node", type=float, default=64.0)
     parser.add_argument("--network-bandwidth-gbps", type=float, default=10.0)
     parser.add_argument("--model-path", type=str, default=None, help="path to a trained SB3 model .zip to include")
-    parser.add_argument("--algo", type=str, default="dqn", choices=["dqn", "ppo"], help="algorithm of --model-path")
+    parser.add_argument("--algo", type=str, default="dqn", choices=["dqn", "ppo", "a2c"], help="algorithm of --model-path")
+    parser.add_argument(
+        "--benchmark-all",
+        action="store_true",
+        default=False,
+        help="automatically discover and benchmark all available trained models (DQN, PPO, A2C)",
+    )
     parser.add_argument(
         "--swf-path",
         type=str,
@@ -180,7 +188,17 @@ def main() -> None:
     )
 
     policies: Dict[str, Policy] = dict(STATIC_POLICIES)
-    if args.model_path:
+    if args.benchmark_all:
+        from pathlib import Path
+        model_dir = Path("models")
+        for algo in ["dqn", "ppo", "a2c"]:
+            best = model_dir / f"{algo}_best" / "best_model.zip"
+            final = model_dir / f"{algo}_final.zip"
+            target = best if best.is_file() else (final if final.is_file() else None)
+            if target:
+                print(f"Loaded {algo.upper()} policy from {target}")
+                policies[f"{algo}_trained"] = load_rl_policy(str(target), algo)
+    elif args.model_path:
         policies[f"{args.algo}_trained"] = load_rl_policy(args.model_path, args.algo)
 
     df = benchmark(env_config, policies, num_episodes=args.num_episodes, base_seed=args.seed)

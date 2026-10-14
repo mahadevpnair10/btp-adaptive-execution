@@ -6,10 +6,10 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}The Central Dilemma: Why Isn't More Parallel Always Better?}{1}{subsection.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Why Static "If-Then" Rules Fail in Real Clusters}{2}{subsection.1.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Our Proposed Solution: Adaptive Reinforcement Learning}{2}{subsection.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}How the Gymnasium Reinforcement Learning Environment Works}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}How the Gymnasium Reinforcement Learning Environment Works}{3}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}What is Gymnasium and Why Do We Use It?}{3}{subsection.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}The Gymnasium Interaction Cycle (Step-by-Step)}{3}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The 5 Return Values of \texttt  {env.step()} Explained in Detail}{3}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The 5 Return Values of \texttt  {env.step()} Explained in Detail}{4}{subsection.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}The 8-Dimensional Observation Space ($\mathbf  {s} \in [0.0, 1.0]^8$)}{4}{subsection.2.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Why Logarithmic Scaling is Necessary for Neural Networks}{4}{subsection.2.5}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces The standardized 8-dimensional observation vector explained in simple terms.}}{5}{table.1}\protected@file@percent }
@@ -19,26 +19,41 @@
 \citation{feitelson2014pwa}
 \citation{talby1999swf}
 \citation{downey2000sdsc}
-\citation{lublin2003workload}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces The 18-attribute Standard Workload Format (SWF v2.2) specification.}}{7}{table.2}\protected@file@percent }
 \newlabel{tab:swf_format}{{2}{7}{The 18-attribute Standard Workload Format (SWF v2.2) specification}{table.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Realistic Workload Data: The SDSC-SP2 Supercomputer Benchmark}{7}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Why Fake (Synthetic) Data Creates Unrealistic Schedulers}{7}{subsection.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The Standard Workload Format (SWF v2.2)}{7}{subsection.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Trace Origin: The SDSC-SP2 Supercomputer}{7}{subsection.3.3}\protected@file@percent }
+\citation{lublin2003workload}
 \citation{casanova2014simgrid}
 \citation{dutot2016batsim}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Trace Origin: The SDSC-SP2 Supercomputer}{8}{subsection.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Converting Raw Accounting Logs to Physical Job Specifications}{8}{subsection.3.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4}The Cluster Physics Simulator: Discrete-Event Simulation with SimPy}{8}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Why Discrete-Event Simulation (DES)?}{8}{subsection.4.1}\protected@file@percent }
-\citation{alexandrov1995loggp}
-\citation{culler1993logp}
+\citation{amdahl1967validity}
+\citation{amdahl1967validity}
+\citation{hensgen1989barrier}
+\citation{hensgen1989barrier}
 \citation{williams2009roofline}
-\citation{casanova2014simgrid}
+\citation{williams2009roofline}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Latency equations and hardware configurations across the three execution modes.}}{9}{table.3}\protected@file@percent }
 \newlabel{tab:latency_formulas}{{3}{9}{Latency equations and hardware configurations across the three execution modes}{table.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Analytical Latency Formulas for the Three Execution Modes}{9}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Modeling Real-World Cluster Contention and Bottlenecks}{9}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Analytical Latency Formulas and Their Scientific Research Origins}{9}{subsection.4.2}\protected@file@percent }
+\citation{amdahl1967validity}
+\citation{amdahl1967validity}
+\citation{alexandrov1995loggp}
+\citation{culler1993logp}
+\citation{culler1993logp}
+\citation{alexandrov1995loggp}
+\citation{casanova2014simgrid}
+\citation{dutot2016batsim}
+\citation{calheiros2011cloudsim}
+\citation{klusacek2010alea}
+\citation{feitelson2014pwa}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Scientific Defense: Why These Equations Accurately Model Real Clusters}{10}{subsection.4.3}\protected@file@percent }
+\citation{williams2009roofline}
+\citation{casanova2014simgrid}
 \citation{barroso2007power}
 \citation{fan2007power}
 \citation{dutot2016batsim}
@@ -50,42 +65,47 @@
 \citation{klusacek2010alea}
 \citation{barroso2007power}
 \citation{fan2007power}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Real-World Server Energy: The Affine Power Model}{10}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}The Deep Q-Network (DQN) Agent and Training Process}{10}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}How Deep Q-Learning Works in Plain English}{10}{subsection.5.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Summary of real-world server physics modeled in the simulation engine.}}{11}{table.4}\protected@file@percent }
-\newlabel{tab:defense_matrix}{{4}{11}{Summary of real-world server physics modeled in the simulation engine}{table.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Neural Network Architecture \& Hyperparameters}{11}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Training Milestones Across 30,000 Steps}{11}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}10,000-Job Comparative Benchmark Results}{11}{section.6}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Reward convergence and learning progression across 30,000 training steps on SDSC-SP2.}}{12}{table.5}\protected@file@percent }
-\newlabel{tab:training_dynamics}{{5}{12}{Reward convergence and learning progression across 30,000 training steps on SDSC-SP2}{table.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Comprehensive 10,000-job benchmark results on the SDSC-SP2 workload trace.}}{12}{table.6}\protected@file@percent }
-\newlabel{tab:benchmark_results}{{6}{12}{Comprehensive 10,000-job benchmark results on the SDSC-SP2 workload trace}{table.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}The Competing Policies}{12}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Performance Comparison}{12}{subsection.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Action Decisions Breakdown}{12}{subsection.6.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Action selection distribution across 10,000 jobs.}}{13}{table.7}\protected@file@percent }
-\newlabel{tab:action_breakdown}{{7}{13}{Action selection distribution across 10,000 jobs}{table.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Implementation Code Navigation Guide}{13}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion \& Future Work}{13}{section.8}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Comprehensive guide to repository source code files and functions.}}{14}{table.8}\protected@file@percent }
-\newlabel{tab:code_navigation}{{8}{14}{Comprehensive guide to repository source code files and functions}{table.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Modeling Real-World Cluster Contention and Bottlenecks}{11}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Real-World Server Energy: The Affine Power Model}{11}{subsection.4.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Summary of real-world server physics modeled in the simulation engine.}}{12}{table.4}\protected@file@percent }
+\newlabel{tab:defense_matrix}{{4}{12}{Summary of real-world server physics modeled in the simulation engine}{table.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Deep Reinforcement Learning Model Baselines and Training}{12}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Why Standard DRL Baselines Are Essential}{12}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}1. Deep Q-Network (DQN) --- Value-Based Learning}{12}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}2. Proximal Policy Optimization (PPO) --- Clipped Actor-Critic}{13}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}3. Advantage Actor-Critic (A2C) --- Synchronous On-Policy Learning}{13}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Comparative Model Hyperparameters}{13}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}10,000-Job Comparative Benchmark Results}{13}{section.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Hyperparameter and architectural specification across the three standard DRL baselines.}}{14}{table.5}\protected@file@percent }
+\newlabel{tab:model_hyperparameters}{{5}{14}{Hyperparameter and architectural specification across the three standard DRL baselines}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}The Seven Competing Policies}{14}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Performance Comparison Across Physical KPIs}{14}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Action Decisions Breakdown}{14}{subsection.6.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Comprehensive 10,000-job benchmark results across all 7 policies on the SDSC-SP2 trace.}}{15}{table.6}\protected@file@percent }
+\newlabel{tab:benchmark_results}{{6}{15}{Comprehensive 10,000-job benchmark results across all 7 policies on the SDSC-SP2 trace}{table.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Action selection distribution across 10,000 jobs on the SDSC-SP2 benchmark.}}{15}{table.7}\protected@file@percent }
+\newlabel{tab:action_breakdown}{{7}{15}{Action selection distribution across 10,000 jobs on the SDSC-SP2 benchmark}{table.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Comprehensive guide to repository source code files and functions.}}{16}{table.8}\protected@file@percent }
+\newlabel{tab:code_navigation}{{8}{16}{Comprehensive guide to repository source code files and functions}{table.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Implementation Code Navigation Guide}{16}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion \& Future Work}{16}{section.8}\protected@file@percent }
 \citation{mao2019decima}
-\bibcite{feitelson2014pwa}{1}
-\bibcite{downey2000sdsc}{2}
-\bibcite{talby1999swf}{3}
-\bibcite{lublin2003workload}{4}
-\bibcite{dutot2016batsim}{5}
-\bibcite{casanova2014simgrid}{6}
-\bibcite{culler1993logp}{7}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Future Directions}{15}{subsection.8.1}\protected@file@percent }
-\bibcite{alexandrov1995loggp}{8}
-\bibcite{williams2009roofline}{9}
-\bibcite{barroso2007power}{10}
-\bibcite{fan2007power}{11}
-\bibcite{calheiros2011cloudsim}{12}
-\bibcite{klusacek2010alea}{13}
-\bibcite{mao2016deeprm}{14}
-\bibcite{mao2019decima}{15}
-\gdef \@abspage@last{16}
+\bibcite{amdahl1967validity}{1}
+\bibcite{hensgen1989barrier}{2}
+\bibcite{feitelson2014pwa}{3}
+\bibcite{downey2000sdsc}{4}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Future Directions: Towards a Novel Adaptive Architecture}{17}{subsection.8.1}\protected@file@percent }
+\bibcite{talby1999swf}{5}
+\bibcite{lublin2003workload}{6}
+\bibcite{dutot2016batsim}{7}
+\bibcite{casanova2014simgrid}{8}
+\bibcite{culler1993logp}{9}
+\bibcite{alexandrov1995loggp}{10}
+\bibcite{williams2009roofline}{11}
+\bibcite{barroso2007power}{12}
+\bibcite{fan2007power}{13}
+\bibcite{calheiros2011cloudsim}{14}
+\bibcite{klusacek2010alea}{15}
+\bibcite{mao2016deeprm}{16}
+\bibcite{mao2019decima}{17}
+\gdef \@abspage@last{19}
