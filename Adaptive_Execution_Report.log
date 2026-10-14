@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.10)  4 OCT 2026 15:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.10)  14 OCT 2026 07:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -819,475 +819,198 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (2.08438pt too wide) in paragraph at lines 78--79
-\T1/lmr/m/n/10.95 (single-core lo-cal), \T1/lmr/bx/n/10.95 Shared-Memory Mul-ti
--thread-ing \T1/lmr/m/n/10.95 (multi-core lo-cal via OpenMP or POSIX
- []
-
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
 2.
+
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/
 enc/dvips/lm/lm-ec.enc}
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
+dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}] [2{/usr/sh
+are/texmf/fonts/enc/dvips/lm/lm-mathit.enc}]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 104.
-
-Overfull \hbox (31.72205pt too wide) in paragraph at lines 105--106
-[]\T1/lmr/bx/n/10.95 Reinforcement Learn-ing Gym-na-sium En-vi-ron-ment (\T1/lm
-tt/b/n/10.95 src/envs/adaptive_exec_env.py\T1/lmr/bx/n/10.95 ):
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 148.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 165.
+ [3]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 182.
+ [4{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [5] [6] [7]
+Underfull \hbox (badness 2158) in paragraph at lines 409--409
+[]|$\OML/lmm/m/it/9 T[] \OT1/lmr/m/n/9 = [] [] +
  []
 
-[2{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (62.98865pt too wide) in paragraph at lines 157--158
-\T1/lmr/m/n/10.95 ory fields from can-celled jobs in raw logs), our bench-mark 
-trace (\T1/lmtt/m/n/10.95 data/workloads/sdsc_sp2_benchmark.swf\T1/lmr/m/n/10.9
-5 ,
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-[]|[]\T1/lmr/bx/n/9 Physical Sig-
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
+[]|[]\T1/lmr/bx/n/9 Real-World Ef-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/bx/n/9 nif-i-cance to
- []
-
-
-Underfull \hbox (badness 3219) in paragraph at lines 228--228
-\T1/lmr/bx/n/9 Schedul-ing Pol-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-[]|\T1/lmr/m/n/9 Log-scaled foot-
- []
-
-
-Underfull \hbox (badness 1755) in paragraph at lines 228--228
-\T1/lmr/m/n/9 6 or-ders of mag-
- []
-
-
-Underfull \hbox (badness 6510) in paragraph at lines 228--228
-[]|\T1/lmr/m/n/9 Compute de-mand
- []
-
-
-Underfull \hbox (badness 3646) in paragraph at lines 228--228
-\T1/lmr/m/n/9 over 9 or-ders of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 com-pute strongly
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 fa-vors par-al-lel
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-[]|\T1/lmr/m/n/9 Amdahl par-al-lel
- []
-
-
-Underfull \hbox (badness 5475) in paragraph at lines 228--228
-[]|\T1/lmr/m/n/9 Fraction of wall-
- []
-
-
-Underfull \hbox (badness 5316) in paragraph at lines 228--228
-\T1/lmr/m/n/9 clock blocked on
- []
-
-
-Underfull \hbox (badness 1776) in paragraph at lines 228--228
-\T1/lmr/m/n/9 nal-izes dis-tributed
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-[]|\T1/lmr/m/n/9 Designated node
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 CPU con-ges-tion.
- []
-
-
-Underfull \hbox (badness 5607) in paragraph at lines 228--228
-\T1/lmr/m/n/9 High val-ues lead
- []
-
-
-Underfull \hbox (badness 8189) in paragraph at lines 228--228
-\T1/lmr/m/n/9 to lo-cal queu-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-[]|\T1/lmr/m/n/9 Cluster-wide uti-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 liza-tion. Tells
- []
-
-
-Underfull \hbox (badness 5878) in paragraph at lines 228--228
-\T1/lmr/m/n/9 the agent if re-
- []
-
-
-Underfull \hbox (badness 4254) in paragraph at lines 228--228
-\T1/lmr/m/n/9 mote nodes have
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 ory pres-sure.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 Warns against
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 mem-ory bus
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 thrash-ing and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 RAM over-flow
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-[]|\T1/lmr/m/n/9 Shared in-ter-con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 nect sat-u-ra-tion.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 De-grades dis-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-\T1/lmr/m/n/9 tributed trans-fers
- []
-
-[4{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 260--260
-[]|[]\T1/lmr/bx/n/9 Operational Trade-off
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--260
-[]|$\OML/lmm/m/it/9 T[] \OT1/lmr/m/n/9 =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--260
-[] [] \OT1/lmr/m/n/9 +
- []
-
-
-Underfull \hbox (badness 2435) in paragraph at lines 260--260
-\T1/lmr/m/n/9 cal cores with zero net-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--260
-[]|$\OML/lmm/m/it/9 T[] \OT1/lmr/m/n/9 =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--260
-[] [] \OT1/lmr/m/n/9 +
- []
-
-
-Underfull \hbox (badness 1721) in paragraph at lines 260--260
-\T1/lmr/m/n/9 cores. Wins only when
- []
-
-
-Underfull \hbox (badness 1838) in paragraph at lines 260--260
-\T1/lmr/m/n/9 tion ex-ceeds LogGP net-
- []
-
-[6] [7]
-Underfull \hbox (badness 4846) in paragraph at lines 376--376
-[]|[]\T1/lmr/bx/n/9 Simulator Im-ple-men-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
 []|[]\T1/lmr/bx/n/9 Literature Stan-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
 []|\T1/lmr/m/n/9 Parallel Core
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 376--376
-\T1/lmr/m/n/9 naive lin-ear speedup as-sump-
+Underfull \hbox (badness 1400) in paragraph at lines 512--512
+\T1/lmr/m/n/9 tency & Se-ri-al-iza-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
-[]|\T1/lmr/m/n/9 Network La-tency
- []
-
-
-Underfull \hbox (badness 1466) in paragraph at lines 376--376
-\T1/lmr/m/n/9 Floor & Se-ri-al-iza-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
 []|\T1/lmr/m/n/9 SimGrid Max-Min
  []
 
 
-Underfull \hbox (badness 2556) in paragraph at lines 376--376
+Underfull \hbox (badness 2556) in paragraph at lines 512--512
 \T1/lmr/m/n/9 as-sum-ing ded-i-cated 10 Gbps
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 376--376
+Underfull \hbox (badness 1107) in paragraph at lines 512--512
 []|\T1/lmr/m/n/9 Memory Bus Bot-
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 376--376
-[]|\T1/lmr/m/n/9 Multi-Tenant Core
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
+[]|\T1/lmr/m/n/9 Noisy Neigh-bor
  []
 
 
-Underfull \hbox (badness 5119) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
+[]|\T1/lmr/m/n/9 Captures tail-latency spikes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
+\T1/lmr/m/n/9 caused by back-ground co-
+ []
+
+
+Underfull \hbox (badness 5189) in paragraph at lines 512--512
+\T1/lmr/m/n/9 tenants com-pet-ing for CPU
+ []
+
+
+Underfull \hbox (badness 5119) in paragraph at lines 512--512
 []|\T1/lmr/m/n/9 Non-Linear Server
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 512--512
 []|\T1/lmr/m/n/9 Proves dis-tributed ex-e-cu-tion
  []
 
-[8]
-Underfull \hbox (badness 2521) in paragraph at lines 428--428
-[]|[]\T1/lmr/bx/n/9 Observed Learn-ing Dy-
- []
-
-
-Underfull \hbox (badness 2005) in paragraph at lines 428--428
-\T1/lmr/m/n/9 bal-ances mem-ory bus con-
- []
-
-
-Underfull \hbox (badness 7186) in paragraph at lines 428--428
-[]|\T1/lmr/bx/n/9 New Best Check-point.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 428--428
-\T1/lmr/m/n/9 Agent suc-cess-fully co-or-di-
- []
-
-
-Underfull \hbox (badness 2903) in paragraph at lines 428--428
-\T1/lmr/m/n/9 nates dis-tributed ex-e-cu-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 456--456
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 595--595
 []|\T1/lmtt/b/n/9 dqn_trained \T1/lmr/bx/n/9 (RL
  []
 
 
-Overfull \hbox (3.4511pt too wide) in paragraph at lines 456--456
-[]|\T1/lmtt/m/n/9 rule_based_threshold| 
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 477--477
+Underfull \hbox (badness 10000) in paragraph at lines 619--619
 []|\T1/lmtt/b/n/9 dqn_trained \T1/lmr/bx/n/9 (RL
  []
 
-[10]
-Underfull \hbox (badness 6380) in paragraph at lines 512--512
-[]|[]\T1/lmr/bx/n/9 Key Classes, Func-tions,
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--627
+
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 512--512
-\T1/lmr/m/n/9 82), an-a-lyt-i-cal la-tency mod-
+Underfull \hbox (badness 10000) in paragraph at lines 628--630
+
+ []
+
+[12]
+Underfull \hbox (badness 2343) in paragraph at lines 667--667
+[]|\T1/lmr/m/n/9 2,000 real-world su-per-com-puter jobs
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 512--512
-\T1/lmr/m/n/9 els (L163--200), LogGP net-
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
+[]|\T1/lmtt/m/n/9 AdaptiveExecutionEnv\T1/lmr/m/n/9 : stan-dard
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 512--512
-\T1/lmr/m/n/9 work, Roofline mem-ory con-
+Underfull \hbox (badness 1708) in paragraph at lines 667--667
+\T1/lmr/m/n/9 Gym-na-sium in-ter-face (\T1/lmtt/m/n/9 reset\T1/lmr/m/n/9 , \T1/
+lmtt/m/n/9 step\T1/lmr/m/n/9 ),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-\T1/lmr/m/n/9 uniform sam-pling (L57--60),
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
+[]|\T1/lmr/m/n/9 Baseline rules:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-[]|\T1/lmtt/m/n/9 SWFWorkloadLoader\T1/lmr/m/n/9 , 18-
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
+\T1/lmtt/m/n/9 rule_based_threshold()\T1/lmr/m/n/9 ,
  []
 
 
-Underfull \hbox (badness 7433) in paragraph at lines 512--512
-[]|\T1/lmr/m/n/9 SDSC-SP2 em-pir-i-cal bench-
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
+\T1/lmtt/m/n/9 always_sequential()\T1/lmr/m/n/9 ,
  []
 
 
-Underfull \hbox (badness 2726) in paragraph at lines 512--512
-[]|\T1/lmtt/m/n/9 AdaptiveExecutionEnv\T1/lmr/m/n/9 , stan-
- []
-
-
-Underfull \hbox (badness 1406) in paragraph at lines 512--512
-\T1/lmr/m/n/9 struc-tion (L140--180), re-ward
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-[]|\T1/lmtt/m/n/9 StaticHeuristics\T1/lmr/m/n/9 :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-\T1/lmtt/m/n/9 rule_based_threshold()
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-\T1/lmr/m/n/9 tors, \T1/lmtt/m/n/9 always_sequential()\T1/lmr/m/n/9 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
 \T1/lmtt/m/n/9 always_shared()\T1/lmr/m/n/9 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-[]|\T1/lmtt/m/n/9 train()\T1/lmr/m/n/9 , \T1/lmtt/m/n/9 make_env()\T1/lmr/m/n/9
- ,
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
+\T1/lmr/m/n/9 tri-als across all 5 poli-cies, logs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-\T1/lmtt/m/n/9 DQN_CONFIG \T1/lmr/m/n/9 hy-per-pa-ram-e-
+Underfull \hbox (badness 3557) in paragraph at lines 667--667
+\T1/lmr/m/n/9 turnaround times, en-ergy, and ac-
  []
 
-
-Underfull \hbox (badness 2443) in paragraph at lines 512--512
-\T1/lmr/m/n/9 ters, SWF trace in-te-gra-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-[]|\T1/lmtt/m/n/9 benchmark()\T1/lmr/m/n/9 , \T1/lmtt/m/n/9 summarize()\T1/lmr/
-m/n/9 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-\T1/lmtt/m/n/9 run_episode()\T1/lmr/m/n/9 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 512--512
-\T1/lmtt/m/n/9 load_rl_policy()\T1/lmr/m/n/9 , trace
- []
-
-
-Underfull \hbox (badness 3439) in paragraph at lines 512--512
-[]|\T1/lmr/m/n/9 24 unit tests: SWF trace
- []
-
-
-Underfull \hbox (badness 1152) in paragraph at lines 512--512
-\T1/lmr/m/n/9 pars-ing, 8-D stan-dard-iza-tion,
- []
-
-
-Underfull \hbox (badness 2680) in paragraph at lines 512--512
-\T1/lmr/m/n/9 Roofline mem-ory con-tention,
- []
-
-[11] [12] [13] [14] (./Adaptive_Execution_Report.aux)
+[13] [14] [15] [16] (./Adaptive_Execution_Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `Adaptive_Execution_Report.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 3A98193FADAB08A07D20292AB3355D49;7948.
+(rerunfilecheck)             Checksum: 89A51807945FE42FA38FB3686D99C07D;9649.
  ) 
 Here is how much of TeX's memory you used:
- 21475 strings out of 476182
- 393965 string characters out of 5795595
+ 21541 strings out of 476182
+ 394939 string characters out of 5795595
  1953975 words of memory out of 5000000
- 42986 multiletter control sequences out of 15000+600000
- 660549 words of font info for 103 fonts, out of 8000000 for 9000
+ 43021 multiletter control sequences out of 15000+600000
+ 667830 words of font info for 110 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,18n,107p,866b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,17n,107p,556b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
-y6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/font
-s/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/symbols/msbm10.pfb>
-Output written on Adaptive_Execution_Report.pdf (14 pages, 537303 bytes).
+e/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lms
+y10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb>
+Output written on Adaptive_Execution_Report.pdf (16 pages, 560575 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 383 compressed objects within 4 object streams
- 94 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 535 PDF objects out of 1000 (max. 8388607)
+ 436 compressed objects within 5 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
